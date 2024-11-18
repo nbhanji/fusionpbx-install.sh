@@ -109,8 +109,7 @@ sed -i /usr/src/freeswitch-$switch_version/modules.conf -e s:'applications/mod_a
 --with-openssl --enable-core-pgsql-support
 
 # compile and install
-make
-make install
+make -j $(getconf _NPROCESSORS_ONLN) CFLAGS+=-Wno-error && make install
 
 #return to the executing directory
 cd $CWD
