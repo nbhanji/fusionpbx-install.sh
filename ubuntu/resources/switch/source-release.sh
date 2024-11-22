@@ -74,7 +74,7 @@ mv freeswitch-$switch_version.-release freeswitch-$switch_version
 cd /usr/src/freeswitch-$switch_version
 
 # bootstrap is needed if using git
-./bootstrap.sh -j
+#./bootstrap.sh -j
 
 #1.10.0 and newer
 if [ $(echo "$switch_version" | tr -d '.') -gt 1100 ]; then
